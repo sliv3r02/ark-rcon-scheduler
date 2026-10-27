@@ -172,12 +172,6 @@ Une ligne `ERREUR` pendant que le serveur redémarre est normale.
 | `No such file or directory` pour `./venv/bin/python` | Tu n'es pas dans le dossier du projet (`cd` dedans) |
 | Rien ne se passe via cron | Vérifie `crontab -l`, les chemins absolus et `ark.log` |
 
-## Sécurité
-
-- **Ne publie jamais `servers.json`** (IP et mots de passe). Avant chaque `git push`, vérifie avec `git status` que ce fichier n'apparaît pas.
-- Si un mot de passe a été publié par erreur, **change-le immédiatement** dans ton panel : supprimer le fichier du dépôt ne suffit pas, il reste dans l'historique Git.
-- Utilise un mot de passe admin long et unique pour chaque serveur.
-
 ## Licence
 
-MIT, voir le fichier `LICENSE` (remplace `<Votre nom ou pseudo>` par le tien).
+MIT, voir le fichier `LICENSE` 
