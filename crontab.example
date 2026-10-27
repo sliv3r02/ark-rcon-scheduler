@@ -1,0 +1,23 @@
+# Exemple de crontab (a adapter : chemins, noms de serveurs, horaires).
+# Installer avec : crontab -e   puis coller ce bloc.
+#
+# Ici : Serveur1 + Serveur2 redemarrent a 4h00 et 16h00,
+#       Serveur3 redemarre a 4h05 et 16h05.
+# Les lignes ci-dessous envoient un message a 5, 2 et 1 minute (avec sauvegarde
+# a 1 minute), puis le script de compte a rebours envoie 10, 9, 8 ... 1 seconde.
+
+PY=/home/pi/ark-rcon-scheduler/venv/bin/python
+CMD=/home/pi/ark-rcon-scheduler/ark_cmd.py
+CR=/home/pi/ark-rcon-scheduler/compte_a_rebours.py
+
+# Serveur1 + Serveur2 : redemarrage a 4h00 et 16h00
+55 3,15 * * * $PY $CMD -s Serveur1,Serveur2 "serverchat Redemarrage dans 5 minutes"
+58 3,15 * * * $PY $CMD -s Serveur1,Serveur2 "serverchat Redemarrage dans 2 minutes"
+59 3,15 * * * $PY $CMD -s Serveur1,Serveur2 "serverchat Redemarrage dans 1 minute, sauvegarde en cours" "saveworld"
+59 3,15 * * * $PY $CR 0 Serveur1,Serveur2
+
+# Serveur3 : redemarrage a 4h05 et 16h05
+0 4,16 * * * $PY $CMD -s Serveur3 "serverchat Redemarrage dans 5 minutes"
+3 4,16 * * * $PY $CMD -s Serveur3 "serverchat Redemarrage dans 2 minutes"
+4 4,16 * * * $PY $CMD -s Serveur3 "serverchat Redemarrage dans 1 minute, sauvegarde en cours" "saveworld"
+4 4,16 * * * $PY $CR 5 Serveur3

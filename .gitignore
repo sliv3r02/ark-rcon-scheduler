@@ -1,0 +1,8 @@
+# Ne JAMAIS publier : contient les IP et mots de passe
+servers.json
+
+# Fichiers generes
+ark.log
+venv/
+__pycache__/
+*.pyc

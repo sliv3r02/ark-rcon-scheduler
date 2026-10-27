@@ -1,0 +1,5 @@
+[
+  {"name": "Serveur1", "label": "Serveur 1", "host": "203.0.113.10", "port": 27020, "password": "CHANGE_MOI_1"},
+  {"name": "Serveur2", "label": "Serveur 2", "host": "203.0.113.11", "port": 27021, "password": "CHANGE_MOI_2"},
+  {"name": "Serveur3", "label": "Serveur 3", "host": "203.0.113.12", "port": 27022, "password": "CHANGE_MOI_3"}
+]
