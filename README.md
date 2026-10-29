@@ -36,7 +36,7 @@ Testé sur ARK Survival Ascended chez un hébergeur ; les commandes RCON utilis�
 ## 2. Installation
 
 ```bash
-git clone https://github.com/VOTRE-COMPTE/ark-rcon-scheduler.git
+git clone https://github.com/sliv3r02E/ark-rcon-scheduler.git
 cd ark-rcon-scheduler
 python3 -m venv venv
 ./venv/bin/pip install -r requirements.txt
